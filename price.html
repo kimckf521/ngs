@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGS - Pricing</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .pricing-section {
+        padding: 8rem 5% 5rem;
+        background-color: var(--light-bg);
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .pricing-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .pricing-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin: 1.5rem 0;
+      }
+
+      .price span {
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+
+      .features-list {
+        list-style: none;
+        margin: 2rem 0;
+      }
+
+      .features-list li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-list i {
+        color: var(--secondary-color);
+        margin-right: 0.5rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: var(--secondary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-top: 1rem;
+      }
+
+      .cta-button:hover {
+        background-color: #2980b9;
+      }
+
+      .popular {
+        border: 2px solid var(--secondary-color);
+        position: relative;
+      }
+
+      .popular::before {
+        content: "Most Popular";
+        position: absolute;
+        top: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">NGS</a>
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tutor.html">Tutor</a></li>
+            <li><a href="price.html" class="active">Price</a></li>
+            <li><a href="why-ngs.html">Why NGS</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pricing-section">
+        <h2>Our Pricing Plans</h2>
+        <p class="section-description">
+          Choose the perfect plan that fits your learning needs and budget.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Basic Plan</h3>
+            <div class="price">$49<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 4 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> Basic study materials</li>
+              <li><i class="fas fa-check"></i> Email support</li>
+              <li><i class="fas fa-check"></i> Progress tracking</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Premium Plan</h3>
+            <div class="price">$99<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 8 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> Premium study materials</li>
+              <li><i class="fas fa-check"></i> Priority support</li>
+              <li><i class="fas fa-check"></i> Detailed progress reports</li>
+              <li><i class="fas fa-check"></i> Monthly assessment</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Elite Plan</h3>
+            <div class="price">$199<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 16 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> All premium features</li>
+              <li><i class="fas fa-check"></i> 24/7 support</li>
+              <li><i class="fas fa-check"></i> Custom study plan</li>
+              <li><i class="fas fa-check"></i> Weekly assessments</li>
+              <li><i class="fas fa-check"></i> One-on-one mentoring</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-sections-container">
+          <div class="footer-section">
+            <h3>About NGS</h3>
+            <p>
+              NGS is a leading educational institution dedicated to providing
+              exceptional learning experiences for students of all ages. Our
+              mission is to empower the next generation through quality
+              education.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+              <a href="index.html">Home</a>
+              <a href="tutor.html">Tutors</a>
+              <a href="price.html">Pricing</a>
+              <a href="why-ngs.html">Why NGS</a>
+              <a href="#features">Services</a>
+              <a href="#testimonials">Reviews</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Education St, City,
+                State 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> info@ngs.com</p>
+              <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Next Generation School. All rights reserved. |
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
