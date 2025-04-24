@@ -1,0 +1,158 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGS - Pricing</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2c3e50",
+              secondary: "#e74c3c",
+              accent: "#3498db",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+  </head>
+  <body>
+
+    <header class="relative">
+      {% include "website/navbar.html" %}
+    </header>
+
+    <main>
+      <section class="pricing-section">
+        <h2>Our Pricing Plans</h2>
+        <p class="section-description">
+          Choose the perfect plan that fits your learning needs and budget.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Basic Plan</h3>
+            <div class="price">$49<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 4 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> Basic study materials</li>
+              <li><i class="fas fa-check"></i> Email support</li>
+              <li><i class="fas fa-check"></i> Progress tracking</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Premium Plan</h3>
+            <div class="price">$99<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 8 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> Premium study materials</li>
+              <li><i class="fas fa-check"></i> Priority support</li>
+              <li><i class="fas fa-check"></i> Detailed progress reports</li>
+              <li><i class="fas fa-check"></i> Monthly assessment</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Elite Plan</h3>
+            <div class="price">$199<span>/month</span></div>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check"></i> 16 hours of tutoring per month
+              </li>
+              <li><i class="fas fa-check"></i> All premium features</li>
+              <li><i class="fas fa-check"></i> 24/7 support</li>
+              <li><i class="fas fa-check"></i> Custom study plan</li>
+              <li><i class="fas fa-check"></i> Weekly assessments</li>
+              <li><i class="fas fa-check"></i> One-on-one mentoring</li>
+            </ul>
+            <a
+              href="https://buy.stripe.com/9AQaFX8Pc1HO7sc6oT"
+              class="cta-button"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-primary to-accent text-white relative">
+      {% include "website/footer.html" %}
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const closeMenuButton = document.getElementById("close-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const body = document.body;
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        body.classList.toggle("overflow-hidden");
+      });
+
+      closeMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      });
+
+      // Close menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+
+      // Scroll behavior
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          navbar.classList.add("shadow-lg", "bg-primary/95");
+        } else {
+          navbar.classList.remove("shadow-lg", "bg-primary/95");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGS - Our Tutors</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2c3e50",
+              secondary: "#e74c3c",
+              accent: "#3498db",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body class="font-sans text-gray-800 antialiased bg-gray-50">
+    <!-- Header with Navigation -->
+    <header class="relative">
+      {% include "website/navbar.html" %}
+    </header>
+
+    <main>
+      <!-- Tutors Section -->
+      <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Our Expert Tutors
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Meet our team of highly qualified and experienced tutors who are
+              dedicated to helping students achieve their academic goals.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tutor Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div
+                class="h-64 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-1">
+                  Dr. Sarah Johnson
+                </h3>
+                <p class="text-accent mb-4">Mathematics Specialist</p>
+                <div class="border-t border-gray-200 pt-4">
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-graduation-cap text-secondary mr-3"></i>
+                      <span>Ph.D. in Mathematics</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-clock text-secondary mr-3"></i>
+                      <span>10+ years of teaching experience</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-secondary mr-3"></i>
+                      <span>Specializes in Calculus and Statistics</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tutor Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div
+                class="h-64 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-1">
+                  Prof. Michael Chen
+                </h3>
+                <p class="text-accent mb-4">Science Expert</p>
+                <div class="border-t border-gray-200 pt-4">
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-graduation-cap text-secondary mr-3"></i>
+                      <span>M.Sc. in Physics</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-clock text-secondary mr-3"></i>
+                      <span>8+ years of teaching experience</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-secondary mr-3"></i>
+                      <span>Specializes in Physics and Chemistry</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tutor Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div
+                class="h-64 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-primary mb-1">
+                  Ms. Emily Wilson
+                </h3>
+                <p class="text-accent mb-4">Language Arts Specialist</p>
+                <div class="border-t border-gray-200 pt-4">
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-graduation-cap text-secondary mr-3"></i>
+                      <span>M.A. in English Literature</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-clock text-secondary mr-3"></i>
+                      <span>7+ years of teaching experience</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-star text-secondary mr-3"></i>
+                      <span>Specializes in Writing and Literature</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section
+        class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-accent text-white text-center"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Start Learning with Our Expert Tutors?
+          </h2>
+          <p class="text-lg mb-8 text-white/80">
+            Join NGS today and experience the difference our personalized
+            approach can make to your educational journey.
+          </p>
+          <a
+            href="price.html"
+            class="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            View Our Pricing
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary to-accent text-white relative">
+      {% include "website/footer.html" %}
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const closeMenuButton = document.getElementById("close-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const body = document.body;
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        body.classList.toggle("overflow-hidden");
+      });
+
+      closeMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      });
+
+      // Close menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+
+      // Scroll behavior
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          navbar.classList.add("shadow-lg", "bg-primary/95");
+        } else {
+          navbar.classList.remove("shadow-lg", "bg-primary/95");
+        }
+      });
+    </script>
+  </body>
+</html>

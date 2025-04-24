@@ -1,0 +1,263 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGS - Home</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2c3e50",
+              secondary: "#e74c3c",
+              accent: "#3498db",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS - We'll keep some custom styles for specific components -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body class="font-sans text-gray-800 antialiased bg-gray-50">
+    
+    <!-- Header with Navigation -->
+    <header class="relative">
+      {% include "website/navbar.html" %}
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative bg-gradient-to-r from-primary to-accent pt-32 pb-24 px-4 sm:px-6 lg:px-8 text-center text-white min-h-screen flex items-center justify-center"
+      >
+        <div class="absolute inset-0 bg-black opacity-10 pattern-dots"></div>
+        <div class="relative max-w-3xl mx-auto">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+          >
+            Welcome to NGS
+          </h1>
+          <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Your trusted partner in education, providing exceptional learning
+            experiences for students of all ages and backgrounds.
+          </p>
+          <a
+            href="why-ngs.html"
+            class="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+          >
+            Learn More
+          </a>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Our Services
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover how we can help you achieve academic excellence through
+              our comprehensive educational services.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="text-secondary text-4xl mb-4">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">Expert Tutors</h3>
+              <p class="text-gray-600">
+                Our tutors are highly qualified professionals with years of
+                experience in their respective fields.
+              </p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="text-secondary text-4xl mb-4">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">
+                Comprehensive Curriculum
+              </h3>
+              <p class="text-gray-600">
+                Well-structured learning materials designed to help students
+                master complex concepts effectively.
+              </p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="text-secondary text-4xl mb-4">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">
+                Personalized Learning
+              </h3>
+              <p class="text-gray-600">
+                Customized learning plans tailored to each student's unique
+                needs, goals, and learning style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+              What Our Students Say
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear from our students about their experience with NGS.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://i.pravatar.cc/150?img=1"
+                  alt="Student"
+                  class="w-16 h-16 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-primary">Sarah Johnson</h4>
+                  <p class="text-gray-500 text-sm">Grade 10 Student</p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "NGS has transformed my approach to learning. Their personalized
+                method helped me improve my grades significantly."
+              </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://i.pravatar.cc/150?img=2"
+                  alt="Student"
+                  class="w-16 h-16 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-primary">Michael Chen</h4>
+                  <p class="text-gray-500 text-sm">Grade 12 Student</p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "The tutors at NGS make complex subjects easy to understand.
+                Their support helped me secure admission to my dream
+                university."
+              </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://i.pravatar.cc/150?img=3"
+                  alt="Parent"
+                  class="w-16 h-16 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-primary">Jennifer Smith</h4>
+                  <p class="text-gray-500 text-sm">Parent</p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "As a parent, I'm impressed with the dedication of NGS tutors.
+                My child's confidence and academic performance have improved
+                tremendously."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary to-accent text-white relative">
+      {% include "website/footer.html" %}
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const closeMenuButton = document.getElementById("close-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const body = document.body;
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        body.classList.toggle("overflow-hidden");
+      });
+
+      closeMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      });
+
+      // Close menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+
+      // Scroll behavior
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          navbar.classList.add("shadow-lg", "bg-primary/95");
+        } else {
+          navbar.classList.remove("shadow-lg", "bg-primary/95");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+{% load static %}      
+      
+<nav
+class="fixed top-0 left-0 w-full bg-gradient-to-r from-primary to-accent shadow-md z-50"
+>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="{% url 'index' %}" class="text-white text-2xl font-bold">
+                <img src="{% static 'img/logo.png' %}" alt="NGS Logo" width="150">
+            </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center justify-center flex-1">
+            <div class="flex space-x-8">
+            <a
+                href="{% url 'index' %}"
+                class="text-white hover:bg-white/10 hover:text-white px-5 py-2 rounded-md text-lg font-medium transition transform hover:-translate-y-1 border-b-2 border-secondary"
+                >Home</a
+            >
+            <a
+                href="{% url 'tutor' %}"
+                class="text-white hover:bg-white/10 hover:text-white px-5 py-2 rounded-md text-lg font-medium transition transform hover:-translate-y-1"
+                >Tutor</a
+            >
+            <a
+                href="{% url 'price' %}"
+                class="text-white hover:bg-white/10 hover:text-white px-5 py-2 rounded-md text-lg font-medium transition transform hover:-translate-y-1"
+                >Price</a
+            >
+            <a
+                href="{% url 'why-ngs' %}"
+                class="text-white hover:bg-white/10 hover:text-white px-5 py-2 rounded-md text-lg font-medium transition transform hover:-translate-y-1"
+                >Why NGS</a
+            >
+            </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button
+            id="mobile-menu-button"
+            type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none"
+            >
+            <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gradient-to-r from-primary to-accent fixed inset-0 z-50 pt-16 overflow-y-auto"
+    >
+        <div
+        class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center"
+        >
+        <a
+            href="{% url 'index' %}"
+            class="text-white hover:bg-white/10 block px-3 py-4 rounded-md text-xl font-medium w-full text-center"
+            >Home</a
+        >
+        <a
+            href="{% url 'tutor' %}"
+            class="text-white hover:bg-white/10 block px-3 py-4 rounded-md text-xl font-medium w-full text-center"
+            >Tutor</a
+        >
+        <a
+            href="{% url 'price' %}"
+            class="text-white hover:bg-white/10 block px-3 py-4 rounded-md text-xl font-medium w-full text-center"
+            >Price</a
+        >
+        <a
+            href="{% url 'why-ngs' %}"
+            class="text-white hover:bg-white/10 block px-3 py-4 rounded-md text-xl font-medium w-full text-center"
+            >Why NGS</a
+        >
+        </div>
+        <button
+        id="close-menu-button"
+        class="absolute top-4 right-4 text-white text-2xl"
+        >
+        <i class="fas fa-times"></i>
+        </button>
+    </div>
+</nav>
+
+<script src="{% static 'js/main.js' %}"></script>
